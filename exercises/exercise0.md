@@ -8,9 +8,11 @@ A library called Bookly keeps track of books and members who borrow them. Each b
 
 a) Identify the `entities` and `attributes` for each entity.
 
-<img src="exercises\assets\{82AE6425-8FC3-4788-91D5-E3B6C3E50C75}.png">
+<img src="assets/entities.png" alt="entities" width="500">
 
 b) Determine the `relationship` between member and books.
+
+<img src="assets/relationship_books.png" alt="relationship" width="500">
 
 c) Draw a `conceptual ERD` using crow foots notation.
 
@@ -22,11 +24,25 @@ This is an ERD conceptual diagram that a database designer and the business stak
 
 a) Describe the entities in this conceptual ERD.
 
+**Customer:** Probably contains name, contact info and most likely and number ID
+
+**Rental:** Probably contains customer_id, car_id, rental_date, return_date and staff_id or name
+
+**Car:** Probably contains car_id make and model etc
+
 b) Write out the relationship labels.
+
+customer and car are linked to rental
 
 c) Describe the relationships between the entities (one-to-many, one-to-one and many-to-many).
 
+Each customer can make multiple rentals
+
+Each car can be rented multiple times by different customers
+
 d) Define the relationship statement for example: "A Customer can have one or more Rentals".
+
+yes, same question as c
 
 ## 2. University management system
 
@@ -44,6 +60,8 @@ c) Draw conceptual ERD with cardinalities
 
 d) Define business rules (e.g. a student can enroll in max 4 courses)
 
+<img src="assets/proffessor_student.png" alt="relationship" width="500">
+
 ## 3. Onshop
 
 An e-commerce platform Onshop manages customers, orders, and products.
@@ -54,9 +72,56 @@ An e-commerce platform Onshop manages customers, orders, and products.
 
 a) Identify key entities and their attributes (e.g., customer_name, order_date)
 
+**Customer:**
+- first_name
+- last_name
+- phone_number
+- email
+- adress
+- customer_id (PK)
+
+**Order**
+- order_id(PK)
+- order_date
+- total_cost
+- product_id(FK)
+- customer_id(FK)
+
+**Product**
+- name
+- price
+- product_id
+
 b) Sketch the conceptual ERD.
 
+<img src="assets/orders.png" alt="relationship" width="500">
+
 c) Define business rules
+
+**Customer-order relationship**
+- a customer can place zero, one or many orders
+- each order must be placed by one customer
+- an order cannot exist without a customer
+
+**order-product relationship**
+- an order must contain one or many products
+- each product has a price and the order sums all the prices
+- a order cannot have zero products
+
+**order rules** 
+- each order has a unique order_id
+- order_date must be recorded
+- each order must have a sum of the total_cost
+
+**customer rules**
+- must have first and last name
+- must have a email address that is validated upon creating an account.
+- must have a address
+
+**product rule**
+- has a unique id
+- has a price
+- has a name
 
 ## 4. Theoretical questions
 
