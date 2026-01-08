@@ -126,10 +126,28 @@ c) Define business rules
 ## 4. Theoretical questions
 
 a) What is a conceptual data model, and why is it important?
+-
+Conceptual data model is the foundation for database design. We connect the entities with eachother without having any of the attributes. It's important because it bridge the gap between business and technical teams. It also help the stakeholder to understand how the data is structured.
 
 b) Storing age in a database, is that a good idea, why?
+-
+No. Because then you have to change it on their birthday. Its better to store birth date. You can still display the age but then it will automatically update once their birth date comes. 
 
 c) What are the three types of data structures, and how do they differ?
+-
+**Conceptual**
+
+The conceptual model contains the entity names and their relationship with eachother.
+Whats unique about this model is that we have relationship labels.
+
+**Logical**
+
+In the logical model we start adding the attributes of each entity and their preliminary data. We also decide Primary key for each entity and what Foreign keys they need to have. We can also decide if we need brigde tables if we for example have many to many.
+
+**Physical**
+
+A physical data model describes how data is actually stored in a database. It defines tables, columns, data types, keys, indexes, and constraints, focusing on performance, storage, and implementation details in a specific database system.
+
 
 d) Give examples of how each data structure is used in real-world applications
 

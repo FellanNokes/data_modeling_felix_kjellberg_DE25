@@ -4,11 +4,12 @@ These exercises are for you to learn fundamental concepts in data modeling. Many
 
 ## 0. Hospital example
 
-Going back to the hospital exercise from [exercise0, task 1](https://github.com/AIgineerAB/data_modeling_course/blob/main/exercises/exercise0.md), we will build logical and physical data models. This is the conceptual data model after we've added the composite entities to take care of many-to-many relationships.
+Going back to the library exercise from [exercise0, task 1](https://github.com/AIgineerAB/data_modeling_course/blob/main/exercises/exercise0.md), we will build logical and physical data models. This is the conceptual data model after we've added the composite entities to take care of many-to-many relationships.
 
-<img src="https://github.com/kokchun/assets/blob/main/data_modeling/conceptual_hospital.png?raw=true" alt="hospital conceptual" width="500">
 
 a) Create a logical data model using lucidcharts
+
+<img src="assets/library_logical.png" alt="relationship" width="500">
 
 b) Identify different keys on the various entities
 
@@ -45,9 +46,15 @@ f) Try to violate a domain constraint, what did you try and what result did you 
 
 a) Which columns could be candidate keys here?
 
+EmployeeID, Telefon and Email
+
 b) From this set of candidate keys, which one would you choose as primary key and which ones as alternate keys?
 
+EmployeeID would be my first choice PK. Telefon and Email are alternate keys
+
 c) Is your primary key considered as natural key or surrogate key?
+
+natural
 
 d) Create another table with a primary key where one of the columns in this table could act as a foreign key.
 
